@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="640" viewBox="0 0 400 640">
+<!-- Original ChargeMate artwork; MIT license. No external fonts or resources. -->
+<g stroke="#263349" stroke-width="12" stroke-linejoin="round">
+<path d="M200 98V48" stroke-linecap="round"/><circle cx="200" cy="36" r="18" fill="#91ebce"/>
+<rect x="58" y="112" width="284" height="224" rx="70" fill="#dceaf4"/>
+<rect x="84" y="145" width="232" height="133" rx="46" fill="#263349" stroke="none"/>
+<path d="M120 218q24-34 48 0m64 0q24-34 48 0" fill="none" stroke="#91ebce" stroke-linecap="round"/>
+<path d="M175 303q25 16 50 0" fill="none" stroke-linecap="round"/>
+<rect x="93" y="353" width="214" height="174" rx="56" fill="#b6a5ef"/>
+<path d="M99 389 54 443M301 389l45 54" fill="none" stroke="#dceaf4" stroke-width="34" stroke-linecap="round"/>
+<path d="M147 527v49m106-49v49" fill="none" stroke="#dceaf4" stroke-width="38" stroke-linecap="round"/>
+<path d="m205 375-38 64h37l-12 53 44-71h-35z" fill="#f9e8ab" stroke="none"/>
+<path d="M118 595h58m48 0h58" fill="none" stroke-width="27" stroke-linecap="round"/>
+</g></svg>

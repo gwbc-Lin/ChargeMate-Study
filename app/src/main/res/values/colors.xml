@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 深色界面基色，避免冷启动白闪 -->
+    <color name="pet_surface">#FF0D0E18</color>
+    <!-- 品牌薄荷色：通知强调色，与角色主题一致 -->
+    <color name="pet_mint">#FF8FE3CB</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

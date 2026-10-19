@@ -1,0 +1,17 @@
+* text=auto
+*.kt text eol=lf
+*.kts text eol=lf
+*.xml text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.ps1 text eol=lf
+gradlew text eol=lf
+gradlew.bat text eol=crlf
+
+# Imported assets and their source hashes must survive checkout byte-for-byte.
+app/src/main/assets/** -text
+asset/** -text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.jar binary

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 深色界面基色，避免冷启动白闪 -->
+    <style name="Theme.WirelessPet" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/pet_surface</item>
+        <item name="android:colorBackground">@color/pet_surface</item>
+        <item name="android:statusBarColor">@color/pet_surface</item>
+        <item name="android:navigationBarColor">@color/pet_surface</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- 全屏宠物页面：纯黑、无标题、无动画残留 -->
+    <style name="Theme.WirelessPet.Pet" parent="android:Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

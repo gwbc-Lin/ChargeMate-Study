@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- 诊断导出只写入并共享缓存目录 -->
+    <cache-path
+        name="diagnostics_exports"
+        path="exports/" />
+</paths>

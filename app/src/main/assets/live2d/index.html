@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; connect-src 'self'; img-src 'self' data: blob:; style-src 'unsafe-inline'; media-src 'none'; worker-src blob:">
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:transparent;touch-action:none}
+canvas{display:block;width:100%;height:100%;touch-action:none;position:relative;z-index:1}
+#clock{display:none;position:absolute;inset:0;pointer-events:none;font-family:Arial,sans-serif;overflow:hidden}
+body.immersive #clock{display:block;background:radial-gradient(ellipse at 22% 35%,#26364b88,transparent 65%),radial-gradient(ellipse at 85% 75%,#38284877,transparent 60%)}
+.digits{position:absolute;top:7%;left:5%;right:5%;display:flex;justify-content:center;gap:.035em;align-items:center;font-size:min(32vw,18vh);font-weight:800;letter-spacing:-.025em;line-height:1;font-variant-numeric:tabular-nums}
+/* Background-clipped text needs room for the last glyph beyond its negative advance. */
+.digits span{padding-right:.08em;margin-right:-.08em;background:linear-gradient(145deg,#daf9f3,#a6cee9 55%,#c8b5f0);-webkit-background-clip:text;background-clip:text;color:transparent}
+#clock[data-style=minimal] .digits span{background-image:linear-gradient(#f5f7fc,#f5f7fc)}
+#clock[data-style=neon] .digits span{background-image:linear-gradient(145deg,#f3b4ef,#b6a4ff 55%,#84daff);-webkit-text-stroke:.5px #dfc5ff;filter:drop-shadow(0 0 .015em #b395d955)}
+#clock[data-style=mint] .digits span{background-image:linear-gradient(145deg,#d8fff2,#78d9c0)}
+#clock[data-style=amber] .digits span{background-image:linear-gradient(145deg,#ffdea0,#efa34e)}
+.png-character{display:block;width:90%;height:90%;position:absolute;inset:5%;object-fit:contain;user-select:none;-webkit-user-drag:none;z-index:1}
+body.immersive .png-character{top:25%;height:70%;bottom:auto}
+@media(orientation:landscape){
+ .clock-separator{display:none}
+ .digits{justify-content:space-between;gap:0;top:50%;transform:translateY(-50%);left:5%;right:6%;font-size:min(33vw,72vh)}
+ body.immersive .png-character{inset:auto;top:3%;left:50%;transform:translateX(-50%);height:94%;width:90%;max-width:90%;object-fit:contain;object-position:center}
+}
+@media(orientation:landscape){
+ body.immersive[data-layout=bust-split] #stage{position:absolute;left:0;top:0;width:100%;height:100%}
+ body.immersive[data-layout=bust-split] .digits{left:54%;right:6%;top:50%;flex-direction:column;justify-content:center;gap:0;font-size:min(32vw,44vh);line-height:.94;letter-spacing:-.025em}
+ body.immersive[data-layout=bust-split] .digits span{transform:scaleX(1.14)}
+ body.immersive[data-layout=bust-split] .clock-separator{display:none}
+ body.immersive[data-layout=bust-split] .png-character{left:0;top:4%;width:65%;height:92%;max-width:none;transform:none;object-fit:contain;object-position:center top}
+}
+/* Keep the header clear; allow the character to overlap the larger portrait digits. */
+@media(orientation:portrait){
+ body.immersive .digits{top:max(7vh,var(--clock-top-inset,0px));left:2%;right:2%;font-size:min(36vw,20vh)}
+}
+</style>
+</head><body><div id="clock" aria-label="当前时间"><div class="digits" aria-hidden="true"><span id="hours"></span><span class="clock-separator">:</span><span id="minutes"></span></div></div><canvas id="stage" aria-label="Live2D 充电陪伴角色"></canvas>
+
+<script src="companion-clock.js"></script><script src="landscape-layout.js"></script><script src="stage-fit.js"></script><script src="playback-policy.js"></script><script src="frame-loop.js"></script><script src="stage.js"></script></body></html>

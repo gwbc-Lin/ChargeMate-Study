@@ -1,0 +1,65 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# 真机调试临时产物（截图、UI dump）
+/shots
+
+# Local IDE/compiler state and credentials
+/.idea/
+/.kotlin/
+*.jks
+*.keystore
+*.p12
+.env
+.env.*
+__pycache__/
+*.pyc
+
+# Full upstream model library can be fetched using tools/fetch_imuncle_assets.py
+/asset/imuncle_live2d/
+# 第三方 Live2D 模型合集（Eikanya/Live2d-model，~15 GB，排除音频）
+/asset/eikanya_live2d/
+# Full upstream Spine animation library (~5.2 GB) from Nikke-db; fetch with tools/fetch_nikke_spine.py
+/asset/spine/
+
+# Device captures remain local; publish only reviewed app screenshots
+/docs/screenshots/*
+!/docs/screenshots/clock-style-picker-bold.png
+!/docs/screenshots/clock-portrait-separated.png
+!/docs/screenshots/clock-landscape-complete-digits.png
+
+/tools/cache/
+# 离线生成缩略图时临时启动的 headless Chrome 用户目录
+/.cache-thumbs-profile/
+# 本机生成的一键启动快捷方式（含绝对路径，不随仓库分发）
+/*.lnk
+
+/app/optional/
+/dist/
+
+# 合集封面缓存（tools/gen_collection_thumbs.mjs 生成，26MB）
+/player/thumbs/collection/
+/player/thumbs/spine/
+# 离线渲染用的 Chrome profile
+/.cache-collection-profile*
+
+# 使用者本地放置的第三方 Spine 模型（不随仓库分发）
+/app/src/spine/assets/live2d/spine/
+
+# 本地开发临时目录与素材浏览工具
+/.tmp-*/
+/.cache-*/
+/player/
